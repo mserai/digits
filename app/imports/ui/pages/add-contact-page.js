@@ -18,11 +18,11 @@ Template.Add_Contact_Page.helpers({
   errorClass() {
     return Template.instance().messageFlags.get(displayErrorMessages) ? 'error' : '';
   },
-  fieldError(fieldName) {
-    const invalidKeys = Template.instance().context.invalidKeys();
-    const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
-    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
-  },
+  //fieldError(fieldName) {
+    //const invalidKeys = Template.instance().context.invalidKeys();
+    //const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
+    //return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
+  //},
 });
 
 
@@ -38,13 +38,13 @@ Template.Add_Contact_Page.events({
 
     const newContactData = { first, last, address, telephone, email };
     // Clear out any old validation errors.
-    instance.context.resetValidation();
+    instance.context.reset();
     // Invoke clean so that newStudentData reflects what will be inserted.
-    contactsSchema.clean(newContactData);
+    const cleanData = contactsSchema.clean(newContactData);
     // Determine validity.
-    instance.context.validate(newContactData);
+    instance.context.validate(cleanData);
     if (instance.context.isValid()) {
-      contacts.insert(newContactData);
+      contacts.insert(cleanData);
       instance.messageFlags.set(displayErrorMessages, false);
       FlowRouter.go('Home_Page');
     } else {
