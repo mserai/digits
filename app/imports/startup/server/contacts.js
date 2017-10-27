@@ -12,6 +12,7 @@ const contactsSeeds = [
     address: '98-112 Kaulike Dr.',
     telephone: '808-226-0450',
     email: 'mserai@hawaii.edu',
+    favorite: true,
   },
   {
     first: 'Steffany',
@@ -19,6 +20,7 @@ const contactsSeeds = [
     address: '98-112 Kaulike Dr.',
     telephone: '808-269-8676',
     email: 'shibata2@hawaii.edu',
+    favorite: true,
   },
   {
     first: 'Jody',
@@ -26,6 +28,7 @@ const contactsSeeds = [
     address: '98-112 Kaulike Dr.',
     telephone: '808-206-2707',
     email: 'jserai@gmail.com',
+    favorite: true,
   },
   {
     first: 'Luke',
@@ -33,6 +36,7 @@ const contactsSeeds = [
     address: '0504 NotTatooine.',
     telephone: '808-123-4567',
     email: 'lonely@jedi.edu',
+    favorite: true,
   },
   {
     first: 'Tom',
@@ -40,6 +44,7 @@ const contactsSeeds = [
     address: '1817 Ship Dr.',
     telephone: '808-050-1475',
     email: 'lastship@usnavy.gov',
+    favorite: true,
   },
 ];
 

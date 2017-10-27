@@ -16,6 +16,23 @@
           {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
           {{> Text_Form_Control label="Email" required=true errorMessage=(fieldError "email")}}
 
+          <div class="field">
+            <label>Favorite</label>
+            <div class="fields">
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="Favorite" id="Yes" value=Boolean>
+                  <label>Yes</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="Favorite" id="No" value=Boolean checked=true>
+                  <label>No</label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <button class="ui button" type="submit">Submit</button>
