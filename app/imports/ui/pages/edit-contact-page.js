@@ -48,7 +48,7 @@ Template.Edit_Contact_Page.events({
     // Determine validity.
     instance.context.validate(newContactData);
     if (instance.context.isValid()) {
-      contacts.insert(newContactData);
+      // contacts.insert(newContactData);
       contacts.update(FlowRouter.getParam('_id'), { $set: newContactData });
       instance.messageFlags.set(displayErrorMessages, false);
       FlowRouter.go('Home_Page');
